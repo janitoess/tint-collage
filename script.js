@@ -8,7 +8,16 @@ const tintImages = [
 ];
 
 upload.addEventListener("change", (e) => {
-  baseImage.src = URL.createObjectURL(e.target.files[0]);
+  const file = e.target.files[0];
+  if (!file) return;
+
+  baseImage = new Image();
+
+  baseImage.onload = () => {
+    console.log("Image loaded"); // debug
+  };
+
+  baseImage.src = URL.createObjectURL(file);
 });
 
 function generateCollage() {
