@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tint Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header>
+    <h1>Tint Studio</h1>
+    <p>Create aesthetic color edits instantly</p>
+  </header>
+
+  <div class="card controls">
+    <input type="file" id="upload" hidden>
+    <label for="upload" class="upload-btn">Upload Image</label>
+    <button onclick="generateCollage()">Generate Tints</button>
+  </div>
+
+  <div id="gallery"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
