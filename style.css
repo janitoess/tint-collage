@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: radial-gradient(circle at top, #1a1a1a, #0a0a0a);
+  color: white;
+}
+
+/* Layout */
+.app {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+button, .upload-btn {
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  border: none;
+  padding: 12px 18px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover, .upload-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #3a3a3a, #222);
+}
+
+/* Gallery */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* Preview cards */
+.preview {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #111;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.preview:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Canvas */
+.preview canvas {
+  width: 100%;
+  display: block;
+}
+
+/* Optional label */
+.preview::after {
+  content: "Download";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.7rem;
+  color: #ccc;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.preview:hover::after {
+  opacity: 1;
+}
