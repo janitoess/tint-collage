@@ -4,9 +4,7 @@ const gallery = document.getElementById("gallery");
 let baseImage = new Image();
 
 const tintImages = [
-  "tints/red.png",
-  "tints/blue.png",
-  "tints/gold.png"
+  "tints/royalblue.PNG
 ];
 
 upload.addEventListener("change", (e) => {
